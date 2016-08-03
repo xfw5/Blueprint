@@ -1,8 +1,4 @@
-from Blueprint import TaskNode
-from Blueprint import TaskStatus
-from Blueprint import Selector
-from Blueprint import Sequence
-import Blueprint
+from Blueprint import *
 
 class SetSecurityPoolTask(TaskNode):
     def OnEvolution(self):
@@ -14,7 +10,7 @@ class SetOrderTask(TaskNode):
         return TaskStatus.Failed
 
 if __name__ == "__main__":
-    Blueprint.Bp_debug = True
+    Bp_debug = True
     security_filter_task = SetSecurityPoolTask("filterSecuiry")
     order_task = SetOrderTask("OrderTask")
 

@@ -2,7 +2,9 @@ Blueprint module:
   Base support for visual coding tool.
 
 Install:
-
+  python setup.py sdist
+   python setup.py install
+   
 Usage:
     Blueprint.Bp_debug = True
     security_filter_task = SetSecurityPoolTask("filterSecuiry")

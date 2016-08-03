@@ -11,4 +11,9 @@ class IsSTSecurity(TaskNode):
         self._endDate = endDate
 
     def OnEvolution(self):
-        info = get_extras('is_st', self._securityCode, start_date=self._startDate, end_date=self._endDate)
+        infos = get_extras('is_st', self._securityCode, start_date=self._startDate, end_date=self._endDate)
+
+        for isST in infos.values:
+            if isST:
+                return TaskStatus.Failed
+        return TaskStatus.Success
