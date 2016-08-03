@@ -5,7 +5,7 @@ Install:
 
 Usage:
     Blueprint.Bp_debug = True
-    security_filter_task = SetSecuirtyTask("filterSecuiry")
+    security_filter_task = SetSecurityPoolTask("filterSecuiry")
     order_task = SetOrderTask("OrderTask")
 
     selector = Selector("Selector")
